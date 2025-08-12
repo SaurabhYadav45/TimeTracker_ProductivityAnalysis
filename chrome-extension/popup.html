@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h3>Time Tracker</h3>
+        <div class="status" id="status-indicator">
+            <span class="status-dot"></span>
+            <span id="status-text">Loading...</span>
+        </div>
+    </header>
+
+    <main class="content">
+        <h4>Today's Top Sites</h4>
+        <ul id="top-sites-list">
+            <li class="placeholder">Start Browse to see data.</li>
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <button id="togglePauseBtn">Pause</button>
+        <button id="viewAnalyticsBtn">View Dashboard</button>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>

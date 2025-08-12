@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #1a1c2e;
+    --card-color: #242742;
+    --primary-text: #ffffff;
+    --secondary-text: #a0a0b8;
+    --accent-color-active: #28a745;
+    --accent-color-paused: #ffc107;
+    --border-color: #3a3d5b;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    width: 320px;
+    margin: 0;
+    padding: 16px;
+    font-size: 14px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-text);
+}
+
+.status-dot.active {
+    background-color: var(--accent-color-active);
+}
+
+.status-dot.paused {
+    background-color: var(--accent-color-paused);
+}
+
+.content {
+    padding: 16px 0;
+}
+
+.content h4 {
+    margin: 0 0 10px 0;
+    color: var(--secondary-text);
+    font-weight: 400;
+}
+
+#top-sites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top-sites-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 4px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#top-sites-list li:last-child {
+    border-bottom: none;
+}
+
+#top-sites-list .site-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+#top-sites-list .site-time {
+    color: var(--secondary-text);
+}
+
+.placeholder {
+    color: var(--secondary-text);
+    text-align: center;
+    padding: 20px 0 !important;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    color: var(--primary-text);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3a3d5b;
+}
+
+#togglePauseBtn.paused {
+    border-color: var(--accent-color-paused);
+    color: var(--accent-color-paused);
+}
